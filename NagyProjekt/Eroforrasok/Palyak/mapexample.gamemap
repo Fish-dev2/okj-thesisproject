@@ -1,0 +1,3 @@
+xSize*ySize
+OBJ(xHely, yHely, xMéret, yMéret, maxElet, kezdoElet, textura)
+CHAR(double xHely,double yHely, double xMéret, double yMéret, double maxElet, double kezdoElet, double sebesség, double sebzés, string textura)

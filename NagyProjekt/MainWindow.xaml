@@ -1,0 +1,87 @@
+﻿<Window x:Class="NagyProjekt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NagyProjekt"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStyle="None" WindowState="Maximized" Closing="FoablakBezar">
+    <Window.Resources>
+        <Style x:Key="ButtonText" TargetType="Label">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="Verdana"/>
+
+        </Style>
+    </Window.Resources>
+    <Grid x:Name="maingrid">
+        <Grid.Background>
+            <SolidColorBrush Color="LightGreen" Opacity="0.5"></SolidColorBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="130*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="newgamebutton" FontWeight="ExtraBold" Background="Transparent" Foreground="DarkGreen" Content="new game" HorizontalContentAlignment="Right" FontSize="40" FontFamily="Verdana" Grid.Column="5" Grid.Row="1" BorderThickness="0" VerticalContentAlignment="Center" Margin="5" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Padding="2" MouseLeftButtonDown="Label_MouseLeftButtonDown"></Label>
+        <Label x:Name="continuebutton" FontWeight="ExtraBold" Background="Transparent" Foreground="DarkGreen" Content="continue" HorizontalContentAlignment="Right" FontSize="40" FontFamily="Verdana" Grid.Column="5" Grid.Row="2" BorderThickness="0" VerticalContentAlignment="Center" Margin="5" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Padding="2" MouseLeftButtonDown="Label_MouseLeftButtonDown"></Label>
+        <Label x:Name="settingsbutton" FontWeight="ExtraBold" Background="Transparent" Foreground="DarkGreen" Content="settings" HorizontalContentAlignment="Right" FontSize="40" FontFamily="Verdana" Grid.Column="5" Grid.Row="3" BorderThickness="0" VerticalContentAlignment="Center" Margin="5" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Padding="2" MouseLeftButtonDown="Label_MouseLeftButtonDown"></Label>
+        <Label x:Name="aboutbutton" FontWeight="ExtraBold" Background="Transparent" Foreground="DarkGreen" Content="about" HorizontalContentAlignment="Right" FontSize="40" FontFamily="Verdana" Grid.Column="5" Grid.Row="4" BorderThickness="0" VerticalContentAlignment="Center" Margin="5" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Padding="2" MouseLeftButtonDown="Label_MouseLeftButtonDown"></Label>
+        <Label x:Name="quitbutton" FontWeight="ExtraBold" Background="Transparent" Foreground="DarkGreen" Content="quit" HorizontalContentAlignment="Right" FontSize="40" FontFamily="Verdana" Grid.Column="5" Grid.Row="5" BorderThickness="0" VerticalContentAlignment="Center" Margin="5" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Padding="2" MouseLeftButtonDown="Label_MouseLeftButtonDown"></Label>
+        <Label Content="RE:CALLER" Foreground="DarkGreen" Background="Transparent" FontSize="100" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="3" VerticalAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Times New Roman" FontWeight="Bold"/>
+        <Rectangle x:Name="Hatter1" Grid.RowSpan="10" Grid.ColumnSpan="10" Panel.ZIndex="-3" Opacity="0"></Rectangle>
+        <Rectangle x:Name="Hatter2" Grid.RowSpan="10" Grid.ColumnSpan="10" Panel.ZIndex="-3" Opacity="0"></Rectangle>
+        <Rectangle x:Name="Hatter3" Grid.RowSpan="10" Grid.ColumnSpan="10" Panel.ZIndex="-2" Opacity="0.2" Fill="LightGreen"></Rectangle>
+        <Rectangle x:Name="atlatszo1" Opacity="0.0" Grid.Row="0" Grid.Column="4" Grid.RowSpan="7" Panel.ZIndex="-1" StrokeThickness="0">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Color="Black" Offset="-0.1"></GradientStop>
+                    <GradientStop Color="Transparent"  Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="atlatszo2" Opacity="0.0" Grid.Row="0" Grid.Column="2" Grid.RowSpan="7" Panel.ZIndex="-1" StrokeThickness="0">
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="1,0" EndPoint="0,0">
+                    <GradientStop Color="Black" Offset="-0.1"></GradientStop>
+                    <GradientStop Color="Transparent"  Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="atlatszo3" Fill="White" Grid.Row="0" Grid.Column="3" Grid.RowSpan="7" Opacity="0.0" Panel.ZIndex="-1" Stroke ="White" StrokeThickness="0" MouseLeftButtonDown="ResetButtons"></Rectangle>
+        <Rectangle x:Name="helper1" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="7" Panel.ZIndex="-2" StrokeThickness="0" Fill="Transparent" MouseLeftButtonDown="ResetButtons"></Rectangle>
+        <Rectangle x:Name="helper2" Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan="7" Panel.ZIndex="-2" StrokeThickness="0" Fill="Transparent" MouseLeftButtonDown="ResetButtons"></Rectangle>
+
+        <!--Gombok amik az overlayen jelennek meg
+        első: quit
+        -->
+        <!-- new game
+        -->
+        <Label Tag="sec" x:Name="egy" Opacity=".0" Background="Transparent" Foreground="DarkGreen" Content="1" HorizontalContentAlignment="Right" FontSize="25" FontFamily="Verdana" Grid.Column="3" Grid.Row="1" BorderThickness="0" VerticalContentAlignment="Center" Margin="5"  Padding="2"></Label>
+        <Label Tag="sec" x:Name="ketto" Opacity=".0" Background="Transparent" Foreground="DarkGreen" HorizontalContentAlignment="Right" FontSize="25" FontFamily="Verdana" Grid.Column="3" Grid.Row="2" BorderThickness="0" VerticalContentAlignment="Center" Margin="5" Padding="2"></Label>
+        <StackPanel x:Name="FXSlider"  Grid.Column="3" Grid.Row="2" Opacity="0" Panel.ZIndex="-1">
+            <TextBlock x:Name="text" Text="{Binding Value}" FontSize="40" HorizontalAlignment="Center" Foreground="DarkGreen"/>
+            <Slider x:Name="slider" Maximum="10" Minimum="0" Value="5" IsSnapToTickEnabled="True" Focusable="False"/>
+        </StackPanel>
+        <Label Tag="sec" x:Name="harom" Opacity=".0" Background="Transparent" Foreground="DarkGreen" Content="3" HorizontalContentAlignment="Right" FontSize="25" FontFamily="Verdana" Grid.Column="3" Grid.Row="3" BorderThickness="0" VerticalContentAlignment="Center" Margin="5"  Padding="2"></Label>
+        <StackPanel x:Name="MusicSlider"  Grid.Column="3" Grid.Row="3" Opacity="0" Panel.ZIndex="-1">
+            <TextBlock x:Name="text2" Text="{Binding Value}" FontSize="40" HorizontalAlignment="Center" Foreground="DarkGreen"/>
+            <Slider x:Name="slider2" Maximum="10" Minimum="0" Value="5" IsSnapToTickEnabled="True" Focusable="False"/>
+        </StackPanel>
+        <Label Tag="sec" x:Name="negy" Opacity=".0" Background="Transparent" Foreground="DarkGreen" Content="4" HorizontalContentAlignment="Right" FontSize="25" FontFamily="Verdana" Grid.Column="3" Grid.Row="4" BorderThickness="0" VerticalContentAlignment="Center" Margin="5"  Padding="2"></Label>
+        <Label Tag="sec" x:Name="ot" Opacity=".0" Background="Transparent" Foreground="DarkGreen" Content="5" HorizontalContentAlignment="Right" FontSize="25" FontFamily="Verdana" Grid.Column="3" Grid.Row="5" BorderThickness="0" VerticalContentAlignment="Center" Margin="5"  Padding="2"></Label>
+        
+        
+    </Grid>
+</Window>

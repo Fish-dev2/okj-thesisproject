@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="NagyProjekt.Pálya" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAZAAIAAAkAABAAAABAAQAAQQAAAAEACAIAAEjCAABA=</HashCode>
+      <FileName>Pályaosztályok\Pálya.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NagyProjekt.PályaElem">
+    <Position X="6" Y="1.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACAAAAAQAAAgkAAAIIAAAAAAAAAAAAAAAAgAAAAIAAA=</HashCode>
+      <FileName>Pályaosztályok\PályaElem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NagyProjekt.Jatekos">
+    <Position X="1.75" Y="6" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAgAQAAIAAgAAAAgAAAA4AAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pályaosztályok\PályaElemTipusok\Jatekos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NagyProjekt.Karakter">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAQAARAEAAEQAAAAAACAAAAAAAAAAAAI=</HashCode>
+      <FileName>Pályaosztályok\PályaElemTipusok\Karakter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NagyProjekt.EletPont" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgQAAAIAAAAAAAEAAAAAAAAACAAAAAgAAAAAAAg=</HashCode>
+      <FileName>Pályaosztályok\Tulajdonságosztályok\EletPont.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NagyProjekt.Pályaosztályok.PályaElemTipusok.Golyo">
+    <Position X="5.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pályaosztályok\PályaElemTipusok\Golyo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NagyProjekt.Pályaosztályok.Objektum">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pályaosztályok\PályaElemTipusok\Objektum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NagyProjekt.Eroforrasok.Fegyver" Collapsed="true">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oCAAAAAEAEAABCBAAAAgAAAARACAAERAAAAAQCAgAAA=</HashCode>
+      <FileName>Pályaosztályok\Tulajdonságosztályok\Fegyver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="NagyProjekt.JatekStatusz" Collapsed="true">
+    <Position X="10.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAACAEAAAAAAAEAEAACA=</HashCode>
+      <FileName>Pályaosztályok\Pálya.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
